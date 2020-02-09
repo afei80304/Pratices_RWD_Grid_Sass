@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:微軟正黑體;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: auto 100px auto;
+    text-align: center;
+    align-items: center;
+    position: sticky;
+    top:0;
+    height:100px;
+    max-width:1200px;
+    margin:0 auto;
+    ul{
+        list-style:none;
+        li{
+            display:inline-block;
+            transition:0.5s;
+            a{
+                text-decoration: none;
+                padding:10px;  
+                color:#994d33;
+                font-size:20px;
+            }
+            &:hover{
+                transform:scale(1,1);
+            }
+        }
+    }
+    img{
+        width:90%;
+        transition:0.2s;
+        &:hover{
+            transform:scaleX(-1,1) scaleY(1,1);
+        }
+    }
+}
+
+#banner{
+    height: 100vh;
+    background-size:cover;
+    background-image: url("../img/banner.jpg");
+    margin-top: -100px;
+}
