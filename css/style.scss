@@ -71,7 +71,7 @@ nav{
     display:grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
-    padding:30px;
+    padding:20px 0 0 0;
     * {
         color: #333;
     }
@@ -115,7 +115,7 @@ nav{
         display:grid;
         margin:0 auto;
         grid-template-columns: repeat(6,1fr);
-        padding:40px 0;
+        padding:20px;
         div{
             display:block;
             text-align: center;
@@ -142,10 +142,12 @@ nav{
 #footer{
     background-color:$footerBC;
     height:400px;
-    
     align-items: center; 
     text-align:center;
     vertical-align: middle;
+    img{
+        margin:30px 0;
+    }
     p{
         color:$spancolor;
         font-size:17px;
@@ -173,13 +175,14 @@ nav{
 
     img {
         filter: invert(1);
+        width: 80px;
     }
 
     // 啟動：點選元素時
-    &:active #menu-box{
+    &:hover #menu-box{
         right: 0;
     }
-    &:hover #menu-box{
+    &:active #menu-box{
         right: 0;
     }
 
@@ -227,6 +230,27 @@ nav{
     #menu{
         display: block;
     }
+    
+    #content-1, #content-2, #content-3 {
+        // 設定格線區域：'區域名稱 區域名稱'
+        grid-template-areas: 'text-area pict';
+        grid-template-columns: 1fr;
+        .pict {
+            text-align: center;
+        }
+
+        .text-area {
+            padding: 150px 0;
+        }
+
+	}
+	#icon {
+        div {
+            grid-template-columns: repeat(6, 1fr);
+            padding: 50px;
+        }
+    }
+
 }
 
 //電腦
