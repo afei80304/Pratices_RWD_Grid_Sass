@@ -4,6 +4,7 @@ $titlecolor:#ff3399;
 $spancolor:#E78A80;
 $footerBC:#7D432B;
 $text-black:#333;
+$text-area-color:rgb(240, 216, 192);
 *{
     padding: 0;
     margin: 0;
@@ -71,12 +72,17 @@ nav{
     display:grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
+
     padding:20px 0 0 0;
     * {
         color: #333;
     }
     .pict{
         grid-area: pict;
+        img{
+            width: 50%;
+        }
+        
     }
     .text-area{
         p{
@@ -198,12 +204,12 @@ nav{
         ul {
             list-style: none;
             li {
-                padding: 30px;
+                padding: 10px;
 
                 a {
                     color: $text-black;
                     text-decoration: none;
-                    font-size: 36px;
+                    font-size: 28px;
                 }
             }
         }
@@ -214,7 +220,35 @@ nav{
 
 // 手機
 @media screen and (max-width: 768px) {
+    nav{
+        grid-template-columns: auto;
+        ul{
+            display:none;
+        }
+    }
 
+    #menu{
+        display: block;
+    }
+    #content-1, #content-2, #content-3 {
+        // 設定格線區域：'區域名稱 區域名稱'
+        grid-template-areas: 'text-area pict';
+        grid-template-columns: 1fr;
+        .pict {
+            text-align: center;
+        }
+
+        .text-area {
+            padding: 150px 0;
+        }
+
+	}
+	#icon {
+        div {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 50px;
+        }
+    }
 }
 
 
@@ -246,7 +280,7 @@ nav{
 	}
 	#icon {
         div {
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             padding: 50px;
         }
     }
@@ -255,5 +289,35 @@ nav{
 
 //電腦
 @media screen and (min-width:1025px){
+    nav{
+        grid-template-columns: auto 100px auto;
+        ul{
+            display: block;
+            li{
+                display:inline-block;
+                transition:0.5s;
+            }
+        }
+    }
+    #menu{
+        display: none;
+    }
+    #content-1, #content-3 {
+        // 設定格線區域：'區域名稱 區域名稱'
+        grid-template-areas: 'pict text-area';
+        grid-template-columns: 1fr 1fr;
+    }
+    #content-2{
+        // 設定格線區域：'區域名稱 區域名稱'
+        grid-template-areas: 'text-area pict';
+        grid-template-columns: 1fr 1fr;
+    }
 
+    #icon {
+        div {
+            grid-template-columns: repeat(6, 1fr);
+            padding: 50px;
+        }
+    }
+   
 }
