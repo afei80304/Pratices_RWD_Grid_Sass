@@ -57,6 +57,7 @@ nav img:hover {
 
 #banner {
   height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-image: url("../img/banner.jpg");
   margin-top: -100px;
@@ -175,7 +176,8 @@ nav img:hover {
 
 #footer {
   background-color: #7D432B;
-  height: 400px;
+  height: 30vh;
+  width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -241,7 +243,7 @@ nav img:hover {
 }
 
 #menu #menu-box ul li {
-  padding: 10px;
+  padding: 7px;
 }
 
 #menu #menu-box ul li a {
@@ -258,24 +260,23 @@ nav img:hover {
   nav ul {
     display: none;
   }
+  #banner {
+    background-position: center center;
+  }
+  #banner div h1 {
+    text-align: center;
+    font-size: 30px;
+  }
   #menu {
     display: block;
-  }
-  #content-1, #content-2, #content-3 {
-        grid-template-areas: 'text-area pict';
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  #content-1 .pict, #content-2 .pict, #content-3 .pict {
-    text-align: center;
-  }
-  #content-1 .text-area, #content-2 .text-area, #content-3 .text-area {
-    padding: 150px 0;
   }
   #icon div {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    padding: 50px;
+    padding: 30px;
+  }
+  #footer img {
+    width: 130px;
   }
 }
 
@@ -287,19 +288,30 @@ nav img:hover {
   nav ul {
     display: none;
   }
+  #banner {
+    background-position: center center;
+  }
+  #banner div {
+    width: 800px;
+  }
+  #banner div h1 {
+    font-size: 40px;
+  }
   #menu {
     display: block;
   }
   #content-1, #content-2, #content-3 {
         grid-template-areas: 'text-area pict';
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   #content-1 .pict, #content-2 .pict, #content-3 .pict {
     text-align: center;
   }
   #content-1 .text-area, #content-2 .text-area, #content-3 .text-area {
-    padding: 150px 0;
+    margin: 40px;
+    padding: 30px 0;
+    text-align: center;
   }
   #icon div {
     -ms-grid-columns: (1fr)[3];
@@ -338,6 +350,9 @@ nav img:hover {
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
     padding: 50px;
+  }
+  #footer {
+    height: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */
