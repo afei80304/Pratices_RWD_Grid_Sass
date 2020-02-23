@@ -3,6 +3,8 @@
   padding: 0;
   margin: 0;
   font-family: 微軟正黑體;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav {
@@ -57,7 +59,6 @@ nav img:hover {
 
 #banner {
   height: 100vh;
-  width: 100vw;
   background-size: cover;
   background-image: url("../img/banner.jpg");
   margin-top: -100px;
@@ -177,7 +178,6 @@ nav img:hover {
 #footer {
   background-color: #7D432B;
   height: 30vh;
-  width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -229,9 +229,9 @@ nav img:hover {
 
 #menu #menu-box {
   position: absolute;
-  right: -500px;
+  right: -400px;
   top: 0;
-  width: 500px;
+  width: 400px;
   height: 100vh;
   background-color: #fff;
   -webkit-transition: 0.5s;
@@ -263,6 +263,9 @@ nav img:hover {
   #banner {
     background-position: center center;
   }
+  #banner div {
+    width: 500px;
+  }
   #banner div h1 {
     text-align: center;
     font-size: 30px;
@@ -270,10 +273,17 @@ nav img:hover {
   #menu {
     display: block;
   }
+  #menu #menu-box {
+    right: -400px;
+    width: 300px;
+  }
   #icon div {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    padding: 30px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .copywriting {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   #footer img {
     width: 130px;
@@ -316,7 +326,7 @@ nav img:hover {
   #icon div {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    padding: 50px;
+    padding: 30px;
   }
 }
 
@@ -350,6 +360,9 @@ nav img:hover {
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
     padding: 50px;
+  }
+  #icon div img {
+    width: 130px;
   }
   #footer {
     height: 400px;
